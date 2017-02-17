@@ -3796,6 +3796,20 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
         }
+      },
+      "dataaccess/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v1.6",
+        "dependencies": {
+          "NETStandard.Library": "1.6.0",
+          "RavenDB.Client": "3.5.2"
+        },
+        "compile": {
+          "netstandard1.6/dataaccess.dll": {}
+        },
+        "runtime": {
+          "netstandard1.6/dataaccess.dll": {}
+        }
       }
     },
     ".NETCoreApp,Version=v1.0/win10-x64": {
@@ -7711,6 +7725,20 @@
         },
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
+        }
+      },
+      "dataaccess/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v1.6",
+        "dependencies": {
+          "NETStandard.Library": "1.6.0",
+          "RavenDB.Client": "3.5.2"
+        },
+        "compile": {
+          "netstandard1.6/dataaccess.dll": {}
+        },
+        "runtime": {
+          "netstandard1.6/dataaccess.dll": {}
         }
       }
     }
@@ -14789,6 +14817,11 @@
         "ref/xamarintvos10/_._",
         "ref/xamarinwatchos10/_._"
       ]
+    },
+    "dataaccess/1.0.0": {
+      "type": "project",
+      "path": "../dataaccess/project.json",
+      "msbuildProject": "../dataaccess/dataaccess.xproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -14805,7 +14838,7 @@
       "Microsoft.Extensions.Logging.Debug >= 1.1.0",
       "Microsoft.Extensions.Options.ConfigurationExtensions >= 1.1.0",
       "Microsoft.NETCore.App >= 1.1.0",
-      "RavenDB.Client >= 3.5.2"
+      "dataaccess >= 1.0.0-*"
     ],
     ".NETCoreApp,Version=v1.0": []
   },

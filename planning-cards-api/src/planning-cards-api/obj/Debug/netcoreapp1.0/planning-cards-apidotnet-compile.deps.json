@@ -16,6 +16,7 @@
     ".NETCoreApp,Version=v1.0": {
       "planning-cards-api/1.0.0": {
         "dependencies": {
+          "dataaccess": "1.0.0",
           "Microsoft.AspNetCore.Mvc": "1.1.1",
           "Microsoft.AspNetCore.Routing": "1.1.0",
           "Microsoft.AspNetCore.Server.IISIntegration": "1.1.0",
@@ -27,8 +28,7 @@
           "Microsoft.Extensions.Logging.Console": "1.1.0",
           "Microsoft.Extensions.Logging.Debug": "1.1.0",
           "Microsoft.Extensions.Options.ConfigurationExtensions": "1.1.0",
-          "Microsoft.NETCore.App": "1.1.0",
-          "RavenDB.Client": "3.5.2"
+          "Microsoft.NETCore.App": "1.1.0"
         },
         "compile": {
           "planning-cards-api.dll": {}
@@ -2691,11 +2691,21 @@
           "System.Xml.XDocument": "4.3.0",
           "System.Xml.XPath": "4.0.1"
         }
+      },
+      "dataaccess/1.0.0": {
+        "dependencies": {
+          "NETStandard.Library": "1.6.1",
+          "RavenDB.Client": "3.5.2"
+        },
+        "compile": {
+          "dataaccess.dll": {}
+        }
       }
     },
     ".NETCoreApp,Version=v1.0/": {
       "planning-cards-api/1.0.0": {
         "dependencies": {
+          "dataaccess": "1.0.0",
           "Microsoft.AspNetCore.Mvc": "1.1.1",
           "Microsoft.AspNetCore.Routing": "1.1.0",
           "Microsoft.AspNetCore.Server.IISIntegration": "1.1.0",
@@ -2707,8 +2717,7 @@
           "Microsoft.Extensions.Logging.Console": "1.1.0",
           "Microsoft.Extensions.Logging.Debug": "1.1.0",
           "Microsoft.Extensions.Options.ConfigurationExtensions": "1.1.0",
-          "Microsoft.NETCore.App": "1.1.0",
-          "RavenDB.Client": "3.5.2"
+          "Microsoft.NETCore.App": "1.1.0"
         },
         "runtime": {
           "planning-cards-api.dll": {}
@@ -5284,6 +5293,15 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
         }
+      },
+      "dataaccess/1.0.0": {
+        "dependencies": {
+          "NETStandard.Library": "1.6.1",
+          "RavenDB.Client": "3.5.2"
+        },
+        "runtime": {
+          "dataaccess.dll": {}
+        }
       }
     }
   },
@@ -6337,6 +6355,11 @@
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-FLhdYJx4331oGovQypQ8JIw2kEmNzCsjVOVYY/16kZTUoquZG85oVn7yUhBE2OZt1yGPSXAL0HTEfzjlbNpM7Q=="
+    },
+    "dataaccess/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

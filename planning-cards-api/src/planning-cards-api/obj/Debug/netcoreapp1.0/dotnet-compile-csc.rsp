@@ -174,7 +174,9 @@
 -r:"C:\Users\dohe\.nuget\packages\System.Threading.Timer\4.3.0\ref\netstandard1.2\System.Threading.Timer.dll"
 -r:"C:\Users\dohe\.nuget\packages\System.Xml.ReaderWriter\4.3.0\ref\netstandard1.3\System.Xml.ReaderWriter.dll"
 -r:"C:\Users\dohe\.nuget\packages\System.Xml.XDocument\4.3.0\ref\netstandard1.3\System.Xml.XDocument.dll"
+-r:"C:\Projects\planning-cards\planning-cards-api\src\dataaccess\bin\Debug\netstandard1.6\dataaccess.dll"
 -resource:"C:\Projects\planning-cards\planning-cards-api\src\planning-cards-api\obj\Debug\netcoreapp1.0\planning-cards-apidotnet-compile.deps.json",planning-cards-api.deps.json
 "C:\Projects\planning-cards\planning-cards-api\src\planning-cards-api\Program.cs"
 "C:\Projects\planning-cards\planning-cards-api\src\planning-cards-api\Startup.cs"
 "C:\Projects\planning-cards\planning-cards-api\src\planning-cards-api\Controllers\ValuesController.cs"
+"C:\Projects\planning-cards\planning-cards-api\src\planning-cards-api\Sessions\SessionDto.cs"

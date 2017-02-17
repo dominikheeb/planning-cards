@@ -2,43 +2,37 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using dataaccess.Sessions;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using planning_cards_api.Sessions;
 
 namespace planning_cards_api.Controllers
 {
     [Route("api/[controller]")]
     public class ValuesController : Controller
     {
+        private SessionManager _sessionManager = new SessionManager();
         // GET api/values
         [HttpGet]
-        public IEnumerable<string> Get()
+        public IEnumerable<SessionDto> Get()
         {
-            return new string[] { "value1", "value2" };
+            var sessionDtos = new List<SessionDto>();
+            var sessions = _sessionManager.GetPlanningSessions();
+            foreach (var planningSession in sessions)
+            {
+                sessionDtos.Add(new SessionDto {Id = planningSession.Id, SessionDescription = planningSession.SessionDescription});
+            }
+
+            return sessionDtos;
         }
 
-        // GET api/values/5
-        [HttpGet("{id}")]
-        public string Get(int id)
-        {
-            return "value";
-        }
-
-        // POST api/values
+        [Route("start")]
         [HttpPost]
-        public void Post([FromBody]string value)
+        public SessionDto StartSession([FromBody]string description)
         {
-        }
-
-        // PUT api/values/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody]string value)
-        {
-        }
-
-        // DELETE api/values/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
+            var session = _sessionManager.StartSession(description);
+            return new SessionDto {Id = session.Id, SessionDescription = session.SessionDescription};
         }
     }
 }
