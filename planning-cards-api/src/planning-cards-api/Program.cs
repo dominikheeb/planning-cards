@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Builder;
 
-namespace PlanningCardAPI
+namespace planning_cards_api
 {
     public class Program
     {
