@@ -7,7 +7,7 @@ export class App {
   configureRouter(config: RouterConfiguration, router: Router) {
     config.title = 'Planning Cards';
     config.map([
-      { route: ['', 'welcome'], name: 'welcome',      moduleId: './welcome',      nav: true, title: 'Welcome' }
+      { route: ['', 'start'], name: 'start',      moduleId: 'modules/start',      nav: true, title: 'Start' }
     ]);
 
     this.router = router;
