@@ -29,9 +29,9 @@ namespace planning_cards_api.Controllers
 
         [Route("start")]
         [HttpPost]
-        public SessionDto StartSession([FromBody]string description)
+        public SessionDto StartSession([FromBody]SessionDto sessionDto)
         {
-            var session = _sessionManager.StartSession(description);
+            var session = _sessionManager.StartSession(sessionDto.SessionDescription);
             return new SessionDto {Id = session.Id, SessionDescription = session.SessionDescription};
         }
     }

@@ -1,3 +1,11 @@
 <template>
-    <p slot="main-content">${heading}</p>
+    <div slot="heading">
+        <p>${heading}</p>
+        <button click.delegate="newSession()">Starte Session</button>
+        <button click.delegate="getSessions()">Lade Sessions</button>
+        <button click.delegate="resetSessions()">Reset</button>
+    </div>
+    <div slot="main-content">
+        <p repeat.for="planningSession of planningSessions">${planningSession.sessionDescription}</p>
+    </div>
 </template>
