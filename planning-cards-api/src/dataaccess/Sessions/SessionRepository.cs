@@ -12,7 +12,7 @@ namespace dataaccess.Sessions
 {
     public class SessionRepository : ISessionRepository
     {
-        private PlanningCardsWebSettings _planningCardsWebSettings;
+        private readonly PlanningCardsWebSettings _planningCardsWebSettings;
 
         public SessionRepository(IOptions<PlanningCardsWebSettings> planningCardsWebSettings)
         {
