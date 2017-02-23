@@ -1,3 +1,7 @@
 #:C:\Projects\planning-cards\planning-cards-api\src\dataaccess\dataaccess.xproj
+C:\Projects\planning-cards\planning-cards-api\src\dataaccess\dataaccess.xproj|C:\Projects\planning-cards\planning-cards-api\src\dataaccess.interfaces\dataaccess.interfaces.xproj
+C:\Projects\planning-cards\planning-cards-api\src\dataaccess.interfaces\dataaccess.interfaces.xproj|C:\Projects\planning-cards\planning-cards-api\src\planning-cards-api.models\planning-cards-api.models.xproj
 #:C:\Projects\planning-cards\planning-cards-api\src\planning-cards-api\planning-cards-api.xproj
 C:\Projects\planning-cards\planning-cards-api\src\planning-cards-api\planning-cards-api.xproj|C:\Projects\planning-cards\planning-cards-api\src\dataaccess\dataaccess.xproj
+C:\Projects\planning-cards\planning-cards-api\src\dataaccess\dataaccess.xproj|C:\Projects\planning-cards\planning-cards-api\src\dataaccess.interfaces\dataaccess.interfaces.xproj
+C:\Projects\planning-cards\planning-cards-api\src\dataaccess.interfaces\dataaccess.interfaces.xproj|C:\Projects\planning-cards\planning-cards-api\src\planning-cards-api.models\planning-cards-api.models.xproj

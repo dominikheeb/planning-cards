@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using dataaccess.interfaces.Sessions;
 using dataaccess.Sessions;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -12,13 +13,19 @@ namespace planning_cards_api.Controllers
     [Route("api/[controller]")]
     public class ValuesController : Controller
     {
-        private SessionManager _sessionManager = new SessionManager();
+        private readonly ISessionRepository _sessionRepository;
+
+        public ValuesController(ISessionRepository sessionRepository)
+        {
+            _sessionRepository = sessionRepository;
+        }
+
         // GET api/values
         [HttpGet]
         public IEnumerable<SessionDto> Get()
         {
             var sessionDtos = new List<SessionDto>();
-            var sessions = _sessionManager.GetPlanningSessions();
+            var sessions = _sessionRepository.GetPlanningSessions();
             foreach (var planningSession in sessions)
             {
                 sessionDtos.Add(new SessionDto {Id = planningSession.Id, SessionDescription = planningSession.SessionDescription});
@@ -31,7 +38,7 @@ namespace planning_cards_api.Controllers
         [HttpPost]
         public SessionDto StartSession([FromBody]SessionDto sessionDto)
         {
-            var session = _sessionManager.StartSession(sessionDto.SessionDescription);
+            var session = _sessionRepository.StartSession(sessionDto.SessionDescription);
             return new SessionDto {Id = session.Id, SessionDescription = session.SessionDescription};
         }
     }

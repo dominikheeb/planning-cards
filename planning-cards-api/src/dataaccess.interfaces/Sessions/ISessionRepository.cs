@@ -1,8 +1,9 @@
 ﻿using System.Collections.Generic;
+using planning_cards_api.models.Sessions;
 
-namespace dataaccess.Sessions
+namespace dataaccess.interfaces.Sessions
 {
-    public interface ISessionManager
+    public interface ISessionRepository
     {
         PlanningSession StartSession(string sessionDescription);
         IEnumerable<PlanningSession> GetPlanningSessions();
