@@ -1,4 +1,4 @@
-﻿FROM microsoft/dotnet-framework
+﻿FROM microsoft/iis:nanoserver
 
 RUN powershell -command Install-PackageProvider -Name "Nuget" -Force
 RUN powershell -command Import-PackageProvider -Name "Nuget"
@@ -6,11 +6,10 @@ RUN powershell -command Register-PackageSource -name nuget -ProviderName NuGet -
 RUN powershell -command install-package -name RavenDB.Server -Destination C:\RavenDB
 RUN powershell -command mv (Get-Item C:\RavenDB\RavenDB.Server.*\tools).FullName C:\RavenDB\Server
 RUN powershell -command rm -R (Get-Item C:\RavenDB\RavenDB.Server.*\).FullName
-RUN C:/RavenDB/Server/Raven.Server.exe /install
 
 WORKDIR C:/RavenDB/Server
 
 
 EXPOSE 8080
 
-ENTRYPOINT ["NET START Raven.Server.exe"]
+ENTRYPOINT ["Raven.Server.exe"]
