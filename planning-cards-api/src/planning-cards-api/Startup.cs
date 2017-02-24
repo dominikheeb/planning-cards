@@ -2,12 +2,15 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using dataaccess.interfaces.Sessions;
+using dataaccess.Sessions;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Cors.Infrastructure;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using planning_cards_api.models.Settings;
 
 namespace planning_cards_api
 {
@@ -28,6 +31,9 @@ namespace planning_cards_api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddOptions();
+
+            services.Configure<PlanningCardsWebSettings>(Configuration);
             // Add framework services.
             var corsBuilder = new CorsPolicyBuilder();
             corsBuilder.AllowAnyHeader();
@@ -41,6 +47,8 @@ namespace planning_cards_api
 
             // Add framework services.
             services.AddMvc();
+
+            services.AddTransient<ISessionRepository, SessionRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

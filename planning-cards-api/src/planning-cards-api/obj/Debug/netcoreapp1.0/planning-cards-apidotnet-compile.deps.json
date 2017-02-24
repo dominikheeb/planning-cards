@@ -28,7 +28,8 @@
           "Microsoft.Extensions.Logging.Console": "1.1.0",
           "Microsoft.Extensions.Logging.Debug": "1.1.0",
           "Microsoft.Extensions.Options.ConfigurationExtensions": "1.1.0",
-          "Microsoft.NETCore.App": "1.1.0"
+          "Microsoft.NETCore.App": "1.1.0",
+          "RavenDB.Client": "3.5.2"
         },
         "compile": {
           "planning-cards-api.dll": {}
@@ -2694,11 +2695,30 @@
       },
       "dataaccess/1.0.0": {
         "dependencies": {
+          "dataaccess.interfaces": "1.0.0",
+          "Microsoft.Extensions.Options": "1.1.0",
           "NETStandard.Library": "1.6.1",
           "RavenDB.Client": "3.5.2"
         },
         "compile": {
           "dataaccess.dll": {}
+        }
+      },
+      "dataaccess.interfaces/1.0.0": {
+        "dependencies": {
+          "NETStandard.Library": "1.6.1",
+          "planning-cards-api.models": "1.0.0"
+        },
+        "compile": {
+          "dataaccess.interfaces.dll": {}
+        }
+      },
+      "planning-cards-api.models/1.0.0": {
+        "dependencies": {
+          "NETStandard.Library": "1.6.1"
+        },
+        "compile": {
+          "planning-cards-api.models.dll": {}
         }
       }
     },
@@ -2717,7 +2737,8 @@
           "Microsoft.Extensions.Logging.Console": "1.1.0",
           "Microsoft.Extensions.Logging.Debug": "1.1.0",
           "Microsoft.Extensions.Options.ConfigurationExtensions": "1.1.0",
-          "Microsoft.NETCore.App": "1.1.0"
+          "Microsoft.NETCore.App": "1.1.0",
+          "RavenDB.Client": "3.5.2"
         },
         "runtime": {
           "planning-cards-api.dll": {}
@@ -5296,11 +5317,30 @@
       },
       "dataaccess/1.0.0": {
         "dependencies": {
+          "dataaccess.interfaces": "1.0.0",
+          "Microsoft.Extensions.Options": "1.1.0",
           "NETStandard.Library": "1.6.1",
           "RavenDB.Client": "3.5.2"
         },
         "runtime": {
           "dataaccess.dll": {}
+        }
+      },
+      "dataaccess.interfaces/1.0.0": {
+        "dependencies": {
+          "NETStandard.Library": "1.6.1",
+          "planning-cards-api.models": "1.0.0"
+        },
+        "runtime": {
+          "dataaccess.interfaces.dll": {}
+        }
+      },
+      "planning-cards-api.models/1.0.0": {
+        "dependencies": {
+          "NETStandard.Library": "1.6.1"
+        },
+        "runtime": {
+          "planning-cards-api.models.dll": {}
         }
       }
     }
@@ -6357,6 +6397,16 @@
       "sha512": "sha512-FLhdYJx4331oGovQypQ8JIw2kEmNzCsjVOVYY/16kZTUoquZG85oVn7yUhBE2OZt1yGPSXAL0HTEfzjlbNpM7Q=="
     },
     "dataaccess/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "dataaccess.interfaces/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "planning-cards-api.models/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

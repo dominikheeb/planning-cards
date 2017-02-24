@@ -1,4 +1,4 @@
-﻿namespace dataaccess.Sessions
+﻿namespace planning_cards_api.models.Sessions
 {
     public class PlanningSession
     {

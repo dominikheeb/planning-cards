@@ -1,18 +1,30 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using dataaccess.interfaces.Sessions;
+using Microsoft.Extensions.Options;
+using planning_cards_api.models.Sessions;
+using planning_cards_api.models.Settings;
+using Raven.Abstractions.Data;
 using Raven.Client;
 using Raven.Client.Document;
 
 namespace dataaccess.Sessions
 {
-    public class SessionManager : ISessionManager
+    public class SessionRepository : ISessionRepository
     {
+        private readonly PlanningCardsWebSettings _planningCardsWebSettings;
+
+        public SessionRepository(IOptions<PlanningCardsWebSettings> planningCardsWebSettings)
+        {
+            _planningCardsWebSettings = planningCardsWebSettings.Value;
+        }
+
         public PlanningSession StartSession(string sessionDescription)
         {
             using (IDocumentStore store = new DocumentStore
             {
-                Url = "http://localhost:8080/", // server URL
-                DefaultDatabase = "planning-cards-db" // default database
+                Url = _planningCardsWebSettings.RavenDbUrl, // server URL
+                DefaultDatabase = _planningCardsWebSettings.RavenDbName // default database
             })
             {
                 store.Initialize();
@@ -36,8 +48,8 @@ namespace dataaccess.Sessions
         {
             using (IDocumentStore store = new DocumentStore
             {
-                Url = "http://localhost:8080/", // server URL
-                DefaultDatabase = "planning-cards-db" // default database
+                Url = _planningCardsWebSettings.RavenDbUrl, // server URL
+                DefaultDatabase = _planningCardsWebSettings.RavenDbName // default database
             })
             {
                 store.Initialize();
