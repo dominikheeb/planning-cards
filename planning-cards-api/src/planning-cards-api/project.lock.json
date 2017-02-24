@@ -3802,7 +3802,7 @@
         "framework": ".NETStandard,Version=v1.6",
         "dependencies": {
           "Microsoft.Extensions.Options": "1.1.0",
-          "NETStandard.Library": "1.6.0",
+          "NETStandard.Library": "1.6.1",
           "RavenDB.Client": "3.5.2",
           "dataaccess.interfaces": "1.0.0"
         },
@@ -7761,7 +7761,7 @@
         "framework": ".NETStandard,Version=v1.6",
         "dependencies": {
           "Microsoft.Extensions.Options": "1.1.0",
-          "NETStandard.Library": "1.6.0",
+          "NETStandard.Library": "1.6.1",
           "RavenDB.Client": "3.5.2",
           "dataaccess.interfaces": "1.0.0"
         },
