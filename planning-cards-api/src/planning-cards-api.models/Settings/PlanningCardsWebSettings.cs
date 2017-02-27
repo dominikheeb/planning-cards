@@ -10,5 +10,7 @@ namespace planning_cards_api.models.Settings
         public string RavenDbUrl { get; set; }
 
         public string RavenDbName { get; set; }
+
+        public string RavenDbApiKey { get; set; }
     }
 }

@@ -1,4 +1,4 @@
-﻿FROM microsoft/iis:nanoserver
+﻿FROM microsoft/windowsservercore
 
 RUN powershell -command Install-PackageProvider -Name "Nuget" -Force
 RUN powershell -command Import-PackageProvider -Name "Nuget"
