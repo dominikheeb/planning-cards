@@ -4,9 +4,17 @@ import {PlanningSession} from '../dto/planning-session'
 export class Start {
     heading: string;
     planningSessions: PlanningSession[];
+    socket: WebSocket;
     constructor(){
         this.heading = "Willkommen auf PlanningCards.ch";
         this.planningSessions = [];
+        this.socket = new WebSocket("ws://localhost:1176/ws");
+    }
+
+    activate(){
+        this.socket.onmessage = function (messageEvent){
+            alert("Message from Server: " + messageEvent.data);
+        };
     }
 
     newSession(){
@@ -28,5 +36,9 @@ export class Start {
 
     resetSessions(){
         this.planningSessions = [];
+    }
+
+    sendSocket(){
+        this.socket.send("Test");
     }
 }
