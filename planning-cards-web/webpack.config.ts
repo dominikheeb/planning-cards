@@ -12,6 +12,7 @@ import * as aurelia from '@easy-webpack/config-aurelia';
 import * as typescript from '@easy-webpack/config-typescript';
 import * as html from '@easy-webpack/config-html';
 import * as css from '@easy-webpack/config-css';
+import * as sass from '@easy-webpack/config-sass';
 import * as fontAndImages from '@easy-webpack/config-fonts-and-images';
 import * as globalBluebird from '@easy-webpack/config-global-bluebird';
 import * as globalJquery from '@easy-webpack/config-global-jquery';
@@ -97,6 +98,7 @@ let config = generateConfig(
   typescript(ENV !== 'test' ? {} : { options: { doTypeCheck: false, sourceMap: false, inlineSourceMap: true, inlineSources: true } }),
   html(),
   css({ filename: 'styles.css', allChunks: true, sourceMap: false }),
+  sass({ filename: 'styles.css', allChunks: true, sourceMap: false }),
   fontAndImages(),
   globalBluebird(),
   globalJquery(),
