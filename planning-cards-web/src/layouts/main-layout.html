@@ -1,12 +1,8 @@
 <template>
-    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-        <require from="../modules/nav-bar.html"></require>
-        <nav-bar router.bind="router"></nav-bar>
-        <main class="mdl-layout__content">
-            <div class="page-content">
-                <slot name="heading"></slot>
-                <slot name="main-content"></slot>
-            </div>
-        </main>
-    </div>
+    <main class="mdl-layout__content">
+        <div class="page-content">
+            <slot name="heading"></slot>
+            <slot name="main-content"></slot>
+        </div>
+    </main>
 </template>

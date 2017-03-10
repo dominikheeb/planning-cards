@@ -1,3 +1,9 @@
 <template>
-  <router-view layout-view="layouts/main-layout.html"></router-view>
+  <div class="page-content">
+    <div mdl="layout" class="mdl-js-layout mdl-layout--fixed-header">
+      <require from="modules/nav-bar.html"></require>
+      <nav-bar router.bind="router"></nav-bar>
+      <router-view layout-view="layouts/main-layout.html"></router-view>
+    </div>
+  </div>
 </template>
