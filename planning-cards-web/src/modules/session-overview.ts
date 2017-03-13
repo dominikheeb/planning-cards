@@ -1,26 +1,24 @@
 import {HttpClient} from 'aurelia-http-client';
-import {PlanningSession} from '../dto/planning-session'
+import {PlanningSession} from '../dto/planning-session';
+import {SessionManagementService} from '../services/sessionManagementService';
 
 export class SessionOverview {
-    planningSessions: PlanningSession[];
+    newSessionForm:PlanningSession;
+    joinSessionForm:PlanningSession;
     constructor(){
-        this.planningSessions = [];
+        this.newSessionForm = new PlanningSession();
+        this.joinSessionForm = new PlanningSession();
     }
 
-    newSession(){
-        var http = new HttpClient();
-        var planningSession = new PlanningSession();
-        planningSession.sessionDescription = "NewSession";
-        http.post('http://localhost:1176/api/values/start', planningSession).then(data => {
-            let planningSession: PlanningSession = JSON.parse(data.response);
-            alert("Session erstellt: " + planningSession.id);
-        });
+    onStartSessionSubmit(){
+        if(this.newSessionForm.sessionDescription && this.newSessionForm.sessionDescription !==""){
+            SessionManagementService.newSession(this.newSessionForm);
+        }
     }
 
-    getSessions() {
-        var http = new HttpClient();
-        http.get('http://localhost:1176/api/values').then(data => {
-            this.planningSessions = JSON.parse(data.response);
-        });
+    onJoinSessionSubmit() {
+        if(this.joinSessionForm.id){
+            alert("ID: " + this.joinSessionForm.id);
+        }
     }
 }

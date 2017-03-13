@@ -16,14 +16,26 @@
                 <div class="mdl-card__actions mdl-card--border">
                     <div mdl="tabs" class="mdl-js-tabs">
                         <div class="mdl-tabs__tab-bar">
-                            <a href="#tab1-panel" class="mdl-tabs__tab is-active">Start Session</a>
-                            <a href="#tab2-panel" class="mdl-tabs__tab">Join Session</a>
+                            <a href="#tab-startsession" class="mdl-tabs__tab is-active">Start Session</a>
+                            <a href="#tab-joinsession" class="mdl-tabs__tab">Join Session</a>
                         </div>
-                        <div class="mdl-tabs__panel is-active" id="tab1-panel">
-                            <button mdl="button" click.delegate="openNewSessionDialog()">Starte Session</button>
+                        <div class="mdl-tabs__panel is-active" id="tab-startsession">
+                            <form submit.delegate="onStartSessionSubmit()">
+                                <div mdl="textfield" class="mdl-js-textfield">
+                                    <input class="mdl-textfield__input" value.bind="newSessionForm.sessionDescription" type="text" name="sessionDescription">
+                                    <label class="mdl-textfield__label" for="sessionDescription">Session Description...</label>
+                                </div>
+                                <button mdl="button" class="mdl-button--primary" type="submit">Starte Session</button>
+                            </form>
                         </div>
-                        <div class="mdl-tabs__panel" id="tab2-panel">
-                            <button mdl="button" click.delegate="enterSessionDialog()">Join Session</button>
+                        <div class="mdl-tabs__panel" id="tab-joinsession">
+                            <form submit.delegate="onJoinSessionSubmit()">
+                                <div mdl="textfield" class="mdl-js-textfield">
+                                    <input class="mdl-textfield__input" value.bind="joinSessionForm.id" type="number" name="sessionNumber">
+                                    <label class="mdl-textfield__label" for="sessionNumber">Session Number...</label>
+                                </div>
+                                <button mdl="button" class="mdl-button--primary" type="submit">Join Session</button>
+                            </form>
                         </div>
                     </div>
                 </div>
