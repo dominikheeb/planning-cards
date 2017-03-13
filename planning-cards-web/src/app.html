@@ -1,8 +1,27 @@
 <template>
   <div class="page-content">
     <div mdl="layout" class="mdl-js-layout mdl-layout--fixed-header">
-      <require from="modules/nav-bar.html"></require>
-      <nav-bar router.bind="router"></nav-bar>
+      <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+          <!-- Title -->
+          <span class="mdl-layout-title">${router.title}</span>
+          <!-- Add spacer, to align navigation to the right -->
+          <div class="mdl-layout-spacer"></div>
+          <!-- Navigation. We hide it in small screens. -->
+          <nav repeat.for="row of router.navigation" class="mdl-navigation mdl-layout--large-screen-only">
+            <a class="mdl-navigation__link" data-toggle="collapse" href.bind="row.href">${row.title}</a>
+          </nav>
+        </div>
+      </header>
+      <div class="mdl-layout__drawer">
+        <span class="mdl-layout-title">${router.title}</span>
+        <nav class="mdl-navigation">
+          <a class="mdl-navigation__link" href="">Link</a>
+          <a class="mdl-navigation__link" href="">Link</a>
+          <a class="mdl-navigation__link" href="">Link</a>
+          <a class="mdl-navigation__link" href="">Link</a>
+        </nav>
+      </div>
       <router-view layout-view="layouts/main-layout.html"></router-view>
     </div>
   </div>
