@@ -18,7 +18,7 @@ export class SessionOverview {
 
     onJoinSessionSubmit() {
         if(this.joinSessionForm.id){
-            alert("ID: " + this.joinSessionForm.id);
+            SessionManagementService.getSession(this.joinSessionForm.id);
         }
     }
 }

@@ -8,8 +8,7 @@ export class App {
     this.router = router;
     config.title = 'Planning Cards';
     config.map([
-      { route: ['', 'start'], name: 'start',      moduleId: 'modules/start',      nav: true, title: 'Start' },
-      { route: ['overview', 'sessionOverview'], name: 'sessionOverview',  moduleId: 'modules/session-overview', nav:true, title: 'Übersicht' }
+      { route: ['', 'sessionOverview'], name: 'sessionOverview',  moduleId: 'modules/session-overview', nav:true, title: 'Übersicht' }
     ]);
   }
 }

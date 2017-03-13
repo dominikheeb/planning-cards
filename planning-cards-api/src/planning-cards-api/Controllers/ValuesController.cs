@@ -34,6 +34,14 @@ namespace planning_cards_api.Controllers
             return sessionDtos;
         }
 
+        [HttpGet]
+        [Route("{id}")]
+        public SessionDto GetSession(long id)
+        {
+            var session = _sessionRepository.GetPlanningSession(id);
+            return new SessionDto { Id = session.Id, SessionDescription = session.SessionDescription };
+        }
+
         [Route("start")]
         [HttpPost]
         public SessionDto StartSession([FromBody]SessionDto sessionDto)

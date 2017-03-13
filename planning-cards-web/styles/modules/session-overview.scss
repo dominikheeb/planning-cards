@@ -1,3 +1,9 @@
 .session-card-container {
     margin: 0 auto;
 }
+
+.session-card-container .mdl-card__title {
+  color: #fff;
+  height: 176px;
+  background: url('../images/Android-Lollipop-wallpapers-p.png') center / cover;
+}
