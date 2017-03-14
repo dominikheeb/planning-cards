@@ -1,20 +1,27 @@
+import {inject} from 'aurelia-framework';
 import {HttpClient} from 'aurelia-http-client';
 import {PlanningSession} from '../dto/planning-session'
 
+@inject(HttpClient)
 export class SessionManagementService {
-    static newSession(planningSession:PlanningSession){
-        var http = new HttpClient();
-        http.post('http://localhost:1176/api/values/start', planningSession).then(data => {
-            let planningSession: PlanningSession = JSON.parse(data.response);
-            alert("Session erstellt: " + planningSession.id);
+    http:HttpClient;
+    constructor(http:HttpClient){
+        http.configure(config => {
+            config.withBaseUrl('http://localhost:1176/api/');
         });
+ 
+        this.http = http;
+    }
+    
+    async newSession(planningSession:PlanningSession){
+        let data = await this.http.post('/values/start', planningSession);
+        let newSession:PlanningSession = JSON.parse(data.response);
+        return newSession;
     }
 
-    static getSession(id:number){
-        var http = new HttpClient();
-        http.get('http://localhost:1176/api/values/' + id).then(data => {
-            let planningSession: PlanningSession = JSON.parse(data.response);
-            alert(planningSession.sessionDescription);
-        });
+    async getSession(id:number){
+        let data = await this.http.get('/values/' + id);
+        let planningSession: PlanningSession = JSON.parse(data.response);
+        return planningSession;
     }
 }
