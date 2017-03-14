@@ -44,6 +44,22 @@ namespace dataaccess.Sessions
             }
         }
 
+        public PlanningSession GetPlanningSession(long id)
+        {
+            using (IDocumentStore store = new DocumentStore
+            {
+                Url = _planningCardsWebSettings.RavenDbUrl, // server URL
+                DefaultDatabase = _planningCardsWebSettings.RavenDbName // default database
+            })
+            {
+                store.Initialize();
+                using (IDocumentSession documentSession = store.OpenSession()) // opens a session that will work in context of 'DefaultDatabase'
+                {
+                    return documentSession.Load<PlanningSession>("PlanningSessions/" + id);
+                }
+            }
+        }
+
         public IEnumerable<PlanningSession> GetPlanningSessions()
         {
             using (IDocumentStore store = new DocumentStore

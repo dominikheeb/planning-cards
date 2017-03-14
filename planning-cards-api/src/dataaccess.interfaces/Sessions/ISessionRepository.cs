@@ -7,5 +7,7 @@ namespace dataaccess.interfaces.Sessions
     {
         PlanningSession StartSession(string sessionDescription);
         IEnumerable<PlanningSession> GetPlanningSessions();
+
+        PlanningSession GetPlanningSession(long id);
     }
 }
