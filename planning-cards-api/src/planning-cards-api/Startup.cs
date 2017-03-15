@@ -11,7 +11,6 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using planning_cards_api.models.Settings;
-using planning_cards_api.PokerSession;
 
 namespace planning_cards_api
 {
@@ -48,7 +47,7 @@ namespace planning_cards_api
 
             // Add framework services.
             services.AddMvc();
-
+            services.AddSignalR(options => options.Hubs.EnableDetailedErrors = true);
             services.AddTransient<ISessionRepository, SessionRepository>();
         }
 
@@ -61,8 +60,7 @@ namespace planning_cards_api
             loggerFactory.AddDebug();
 
             app.UseMvc();
-
-            app.Map("/ws", WebSocketHandler.Map);
+            app.UseSignalR();
         }
     }
 }
