@@ -69,6 +69,7 @@
     "aurelia-http-client": "^1.0.4",
     "aurelia-loader-webpack": "^1.0.3",
     "aurelia-logging-console": "^1.0.0",
+    "aurelia-mdl-webpack": "^0.1.2",
     "aurelia-pal-browser": "^1.0.0",
     "aurelia-polyfills": "^1.1.1",
     "aurelia-route-recognizer": "^1.1.0",
@@ -77,7 +78,6 @@
     "aurelia-templating-resources": "^1.2.0",
     "aurelia-templating-router": "^1.0.0",
     "bluebird": "^3.4.6",
-    "bootstrap": "^3.3.7",
     "font-awesome": "^4.7.0",
     "isomorphic-fetch": "^2.2.1",
     "jquery": "^3.1.1"
@@ -96,6 +96,7 @@
     "@easy-webpack/config-global-jquery": "^2.1.0",
     "@easy-webpack/config-html": "^3.1.0",
     "@easy-webpack/config-json": "^3.1.0",
+    "@easy-webpack/config-sass": "^5.0.0",
     "@easy-webpack/config-source-map-support": "^1.0.2",
     "@easy-webpack/config-test-coverage-istanbul": "^3.2.0",
     "@easy-webpack/config-typescript": "^5.0.0",

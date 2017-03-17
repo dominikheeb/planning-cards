@@ -1,6 +1,8 @@
 <template>
-    <require from="../modules/nav-bar.html"></require>
-    <nav-bar router.bind="router"></nav-bar>
-    <slot name="heading"></slot>
-    <slot name="main-content"></slot>
+    <main class="mdl-layout__content pc-maincontent">
+        <div class="page-content">
+            <slot name="heading"></slot>
+            <slot name="main-content"></slot>
+        </div>
+    </main>
 </template>

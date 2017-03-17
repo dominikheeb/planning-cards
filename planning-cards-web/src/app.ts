@@ -3,13 +3,13 @@ import {Router, RouterConfiguration} from 'aurelia-router';
 
 export class App {
   router: Router;
-
-  configureRouter(config: RouterConfiguration, router: Router) {
+  
+  configureRouter(config: RouterConfiguration, router: Router) : void {
+    this.router = router;
     config.title = 'Planning Cards';
     config.map([
-      { route: ['', 'start'], name: 'start',      moduleId: 'modules/start',      nav: true, title: 'Start' }
+      { route: ['', 'sessionOverview'], name: 'sessionOverview',  moduleId: 'modules/session-overview', nav:true, title: 'Übersicht' },
+      { route: ['session/:id', 'cardSession'], name: 'cardSession',  moduleId: 'modules/card-session', nav:false, title: 'Planning Card Session' }
     ]);
-
-    this.router = router;
   }
 }
