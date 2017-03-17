@@ -14,13 +14,13 @@ export class SessionManagementService {
     }
     
     async newSession(planningSession:PlanningSession){
-        let data = await this.http.post('/values/start', planningSession);
+        let data = await this.http.post('/sessions/start', planningSession);
         let newSession:PlanningSession = JSON.parse(data.response);
         return newSession;
     }
 
     async getSession(id:number){
-        let data = await this.http.get('/values/' + id);
+        let data = await this.http.get('/sessions/' + id);
         let planningSession: PlanningSession = JSON.parse(data.response);
         return planningSession;
     }

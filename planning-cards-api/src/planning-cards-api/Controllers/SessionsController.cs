@@ -11,11 +11,11 @@ using planning_cards_api.Sessions;
 namespace planning_cards_api.Controllers
 {
     [Route("api/[controller]")]
-    public class ValuesController : Controller
+    public class SessionsController : Controller
     {
         private readonly ISessionRepository _sessionRepository;
 
-        public ValuesController(ISessionRepository sessionRepository)
+        public SessionsController(ISessionRepository sessionRepository)
         {
             _sessionRepository = sessionRepository;
         }
