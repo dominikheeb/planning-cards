@@ -11,8 +11,8 @@ export class CardSession {
     constructor(sessionManagementService: SessionManagementService){
         this.sessionManagementService = sessionManagementService;
     }
-activate(params
-    ){
+
+    activate(params){
         this.sessionManagementService.getSession(params.id).then((planningSession) => {
             this.planningSession = planningSession;
             this.sessionManagementService.joinSession(planningSession.id);
