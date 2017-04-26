@@ -32,6 +32,8 @@ export class SessionManagementService {
         sessionHubProxy.on("setConnectionId", function(msg:string){
             alert(msg);
         });
-        connection.start().fail(msg => alert("connection failed: " + msg));
+        connection.start().done(() => {
+            sessionHubProxy.invoke("joinSession", id);
+        }).fail(msg => alert("connection failed: " + msg));
     }
 }
