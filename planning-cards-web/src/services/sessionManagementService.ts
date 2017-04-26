@@ -34,6 +34,6 @@ export class SessionManagementService {
         });
         connection.start().done(() => {
             sessionHubProxy.invoke("joinSession", id);
-        }).fail(msg => alert("connection failed: " + msg));
+        }).fail(msg => alert("Connection failed: " + msg));
     }
 }
