@@ -10,12 +10,12 @@ export class CardSession {
 
     constructor(sessionManagementService:SessionManagementService){
         this.sessionManagementService = sessionManagementService;
-        this.planningSession = null;
     }
 
     activate(params){
         this.sessionManagementService.getSession(params.id).then(planningSession => {
             this.planningSession = planningSession;
+            this.sessionManagementService.joinSession(planningSession.id);
         });
     }
 }

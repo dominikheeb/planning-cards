@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v1.0/",
-    "signature": "15708b80d2f7a3f4f217d9000954a5088d59789e"
+    "signature": "2513817737df80e4d4edcabb8ae0fb8f32b65c59"
   },
   "compilationOptions": {
     "defines": [
@@ -21,6 +21,7 @@
           "Microsoft.AspNetCore.Routing": "1.1.0",
           "Microsoft.AspNetCore.Server.IISIntegration": "1.1.0",
           "Microsoft.AspNetCore.Server.Kestrel": "1.1.0",
+          "Microsoft.AspNetCore.SignalR.Server": "0.2.0-preview2-22683",
           "Microsoft.AspNetCore.WebSockets.Server": "0.1.0",
           "Microsoft.Extensions.Configuration.EnvironmentVariables": "1.1.0",
           "Microsoft.Extensions.Configuration.FileExtensions": "1.1.0",
@@ -30,7 +31,7 @@
           "Microsoft.Extensions.Logging.Debug": "1.1.0",
           "Microsoft.Extensions.Options.ConfigurationExtensions": "1.1.0",
           "Microsoft.NETCore.App": "1.1.0",
-          "RavenDB.Client": "3.5.2"
+          "RavenDB.Client": "3.5.3"
         },
         "compile": {
           "planning-cards-api.dll": {}
@@ -499,6 +500,37 @@
         },
         "compile": {
           "lib/netstandard1.3/Microsoft.AspNetCore.Server.Kestrel.dll": {}
+        }
+      },
+      "Microsoft.AspNetCore.SignalR.Messaging/0.2.0-preview2-22683": {
+        "dependencies": {
+          "Microsoft.CSharp": "4.3.0",
+          "Microsoft.Extensions.Logging": "1.1.0",
+          "Microsoft.Extensions.Options": "1.1.0",
+          "NETStandard.Library": "1.6.1",
+          "System.Dynamic.Runtime": "4.3.0",
+          "System.Reflection.Emit": "4.3.0",
+          "System.Reflection.Emit.ILGeneration": "4.3.0",
+          "System.Threading.Thread": "4.3.0",
+          "System.Threading.ThreadPool": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard1.3/Microsoft.AspNetCore.SignalR.Messaging.dll": {}
+        }
+      },
+      "Microsoft.AspNetCore.SignalR.Server/0.2.0-preview2-22683": {
+        "dependencies": {
+          "Microsoft.AspNetCore.DataProtection": "1.1.0",
+          "Microsoft.AspNetCore.Hosting.Abstractions": "1.1.0",
+          "Microsoft.AspNetCore.Http.Extensions": "1.1.0",
+          "Microsoft.AspNetCore.SignalR.Messaging": "0.2.0-preview2-22683",
+          "Microsoft.Extensions.DependencyModel": "1.1.0",
+          "NETStandard.Library": "1.6.1",
+          "Newtonsoft.Json": "9.0.1",
+          "System.Runtime.Serialization.Primitives": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard1.6/Microsoft.AspNetCore.SignalR.Server.dll": {}
         }
       },
       "Microsoft.AspNetCore.WebSockets.Protocol/0.1.0": {
@@ -1118,7 +1150,7 @@
           "lib/netstandard1.0/Newtonsoft.Json.dll": {}
         }
       },
-      "RavenDB.Client/3.5.2": {
+      "RavenDB.Client/3.5.3": {
         "dependencies": {
           "Microsoft.CSharp": "4.3.0",
           "Microsoft.Extensions.Configuration": "1.1.0",
@@ -2056,6 +2088,9 @@
           "System.Reflection.Emit.ILGeneration": "4.3.0",
           "System.Reflection.Primitives": "4.3.0",
           "System.Runtime": "4.3.0"
+        },
+        "compile": {
+          "ref/netstandard1.1/System.Reflection.Emit.dll": {}
         }
       },
       "System.Reflection.Emit.ILGeneration/4.3.0": {
@@ -2063,6 +2098,9 @@
           "System.Reflection": "4.3.0",
           "System.Reflection.Primitives": "4.3.0",
           "System.Runtime": "4.3.0"
+        },
+        "compile": {
+          "ref/netstandard1.0/System.Reflection.Emit.ILGeneration.dll": {}
         }
       },
       "System.Reflection.Emit.Lightweight/4.3.0": {
@@ -2729,7 +2767,7 @@
           "dataaccess.interfaces": "1.0.0",
           "Microsoft.Extensions.Options": "1.1.0",
           "NETStandard.Library": "1.6.1",
-          "RavenDB.Client": "3.5.2"
+          "RavenDB.Client": "3.5.3"
         },
         "compile": {
           "dataaccess.dll": {}
@@ -2761,6 +2799,7 @@
           "Microsoft.AspNetCore.Routing": "1.1.0",
           "Microsoft.AspNetCore.Server.IISIntegration": "1.1.0",
           "Microsoft.AspNetCore.Server.Kestrel": "1.1.0",
+          "Microsoft.AspNetCore.SignalR.Server": "0.2.0-preview2-22683",
           "Microsoft.AspNetCore.WebSockets.Server": "0.1.0",
           "Microsoft.Extensions.Configuration.EnvironmentVariables": "1.1.0",
           "Microsoft.Extensions.Configuration.FileExtensions": "1.1.0",
@@ -2770,7 +2809,7 @@
           "Microsoft.Extensions.Logging.Debug": "1.1.0",
           "Microsoft.Extensions.Options.ConfigurationExtensions": "1.1.0",
           "Microsoft.NETCore.App": "1.1.0",
-          "RavenDB.Client": "3.5.2"
+          "RavenDB.Client": "3.5.3"
         },
         "runtime": {
           "planning-cards-api.dll": {}
@@ -3239,6 +3278,37 @@
         },
         "runtime": {
           "lib/netstandard1.3/Microsoft.AspNetCore.Server.Kestrel.dll": {}
+        }
+      },
+      "Microsoft.AspNetCore.SignalR.Messaging/0.2.0-preview2-22683": {
+        "dependencies": {
+          "Microsoft.CSharp": "4.3.0",
+          "Microsoft.Extensions.Logging": "1.1.0",
+          "Microsoft.Extensions.Options": "1.1.0",
+          "NETStandard.Library": "1.6.1",
+          "System.Dynamic.Runtime": "4.3.0",
+          "System.Reflection.Emit": "4.3.0",
+          "System.Reflection.Emit.ILGeneration": "4.3.0",
+          "System.Threading.Thread": "4.3.0",
+          "System.Threading.ThreadPool": "4.3.0"
+        },
+        "runtime": {
+          "lib/netstandard1.3/Microsoft.AspNetCore.SignalR.Messaging.dll": {}
+        }
+      },
+      "Microsoft.AspNetCore.SignalR.Server/0.2.0-preview2-22683": {
+        "dependencies": {
+          "Microsoft.AspNetCore.DataProtection": "1.1.0",
+          "Microsoft.AspNetCore.Hosting.Abstractions": "1.1.0",
+          "Microsoft.AspNetCore.Http.Extensions": "1.1.0",
+          "Microsoft.AspNetCore.SignalR.Messaging": "0.2.0-preview2-22683",
+          "Microsoft.Extensions.DependencyModel": "1.1.0",
+          "NETStandard.Library": "1.6.1",
+          "Newtonsoft.Json": "9.0.1",
+          "System.Runtime.Serialization.Primitives": "4.3.0"
+        },
+        "runtime": {
+          "lib/netstandard1.6/Microsoft.AspNetCore.SignalR.Server.dll": {}
         }
       },
       "Microsoft.AspNetCore.WebSockets.Protocol/0.1.0": {
@@ -3855,7 +3925,7 @@
           "lib/netstandard1.0/Newtonsoft.Json.dll": {}
         }
       },
-      "RavenDB.Client/3.5.2": {
+      "RavenDB.Client/3.5.3": {
         "dependencies": {
           "Microsoft.CSharp": "4.3.0",
           "Microsoft.Extensions.Configuration": "1.1.0",
@@ -5382,7 +5452,7 @@
           "dataaccess.interfaces": "1.0.0",
           "Microsoft.Extensions.Options": "1.1.0",
           "NETStandard.Library": "1.6.1",
-          "RavenDB.Client": "3.5.2"
+          "RavenDB.Client": "3.5.3"
         },
         "runtime": {
           "dataaccess.dll": {}
@@ -5602,6 +5672,16 @@
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-PbVYQUVxOwtrl9YCnw8ykXSufELVeEuASYahVh1F7B4LYVtcqwyV5+FhXlJkboGM4ozKMrdhB5w/tlLLcmHxNA=="
+    },
+    "Microsoft.AspNetCore.SignalR.Messaging/0.2.0-preview2-22683": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-eaeK3BxMBGIASlRK4tH1WBjk6zDhrnO+OOf5L6dAnmi1YmxKuEqQVLRX5cbTsnxhN2iZYiYGXtPruNN2ExQAQw=="
+    },
+    "Microsoft.AspNetCore.SignalR.Server/0.2.0-preview2-22683": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-82zBRqVj2V+sqQ9TInuYUTOOveOCTIs3yX4Z9WMqcUjTHqgBiE4hsn6j3jzrhuBR16QYbmGmuRo7izLDpJEn+g=="
     },
     "Microsoft.AspNetCore.WebSockets.Protocol/0.1.0": {
       "type": "package",
@@ -5863,10 +5943,10 @@
       "serviceable": true,
       "sha512": "sha512-U82mHQSKaIk+lpSVCbWYKNavmNH1i5xrExDEquU1i6I5pV6UMOqRnJRSlKO3cMPfcpp0RgDY+8jUXHdQ4IfXvw=="
     },
-    "RavenDB.Client/3.5.2": {
+    "RavenDB.Client/3.5.3": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-/uVunD0tcI2UQCzFp0g46+CjSF2ElQ/Bc9tWw8FS4f0iIK728XCjY8stn3+s78tiz8x2EUGwAnaOVfQJB6hI5g=="
+      "sha512": "sha512-uXVxdhex/xXxbz53x75wM3nzm5hzexWV/GQIPyV2NiPG8E7cJoZ+cuelgenkdmNRttQ5hgt/9QkjpLKZ4ZP1LA=="
     },
     "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
       "type": "package",

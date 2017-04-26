@@ -1,6 +1,6 @@
 import {inject} from 'aurelia-framework';
 import {HttpClient} from 'aurelia-http-client';
-import {PlanningSession} from '../dto/planning-session'
+import {PlanningSession} from '../dto/planning-session';
 
 @inject(HttpClient)
 export class SessionManagementService {
@@ -23,5 +23,15 @@ export class SessionManagementService {
         let data = await this.http.get('/sessions/' + id);
         let planningSession: PlanningSession = JSON.parse(data.response);
         return planningSession;
+    }
+
+    // , sessionCallback:(method:string, params:any) => void
+    async joinSession(id:number){
+        var connection = $.hubConnection("http://localhost:1176");
+        var sessionHubProxy = connection.createHubProxy('sessionHub');
+        sessionHubProxy.on("setConnectionId", function(msg:string){
+            alert(msg);
+        });
+        connection.start().fail(msg => alert("connection failed: " + msg));
     }
 }

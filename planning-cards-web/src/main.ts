@@ -4,6 +4,7 @@ import '../styles/main.scss';
 import 'font-awesome/css/font-awesome.css';
 import 'material-design-lite/material';
 import 'material-design-lite/material.css';
+import 'signalr';
 
 // comment out if you don't want a Promise polyfill (remove also from webpack.config.js)
 import * as Bluebird from 'bluebird';
