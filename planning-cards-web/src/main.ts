@@ -1,15 +1,15 @@
-﻿import {Aurelia} from 'aurelia-framework';
+﻿import {Aurelia} from "aurelia-framework";
+ import "font-awesome/css/font-awesome.css";
+ import "material-design-lite/material";
+ import "signalr";
 // we want font-awesome to load as soon as possible to show the fa-spinner
-import '../styles/main.scss';
-import 'font-awesome/css/font-awesome.css';
-import 'material-design-lite/material';
-import 'signalr';
+ import "../styles/main.scss";
 
 // comment out if you don't want a Promise polyfill (remove also from webpack.config.js)
-import * as Bluebird from 'bluebird';
-Bluebird.config({ warnings: false });
+ import * as Bluebird from "bluebird";
+ Bluebird.config({ warnings: false });
 
-export async function configure(aurelia: Aurelia) {
+ export async function configure(aurelia: Aurelia) {
   aurelia.use
     .standardConfiguration()
     .developmentLogging()
@@ -22,9 +22,9 @@ export async function configure(aurelia: Aurelia) {
   // Anyone wanting to use HTMLImports to load views, will need to install the following plugin.
   // aurelia.use.plugin('aurelia-html-import-template-loader')
   await aurelia.start()
-    .then(() => aurelia.setRoot('app'));
+    .then(() => aurelia.setRoot("app"));
 
-  // if you would like your website to work offline (Service Worker), 
+  // if you would like your website to work offline (Service Worker),
   // install and enable the @easy-webpack/config-offline package in webpack.config.js and uncomment the following code:
   /*
   const offline = await System.import('offline-plugin/runtime');

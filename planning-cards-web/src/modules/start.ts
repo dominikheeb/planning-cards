@@ -1,5 +1,5 @@
-import {HttpClient} from 'aurelia-http-client';
-import {PlanningSession} from '../dto/planning-session'
+import {HttpClient} from "aurelia-http-client";
+import {PlanningSession} from "../dto/planning-session";
 
 export class Start {
     heading: string;
@@ -12,24 +12,24 @@ export class Start {
     }
 
     activate(){
-        this.socket.onmessage = function (messageEvent){
+        this.socket.onmessage = function(messageEvent){
             alert("Message from Server: " + messageEvent.data);
         };
     }
 
     newSession(){
-        var http = new HttpClient();
-        var planningSession = new PlanningSession();
+        const http = new HttpClient();
+        const planningSession = new PlanningSession();
         planningSession.sessionDescription = "NewSession";
-        http.post('http://localhost:1176/api/values/start', planningSession).then(data => {
-            let planningSession: PlanningSession = JSON.parse(data.response);
+        http.post("http://localhost:1176/api/values/start", planningSession).then((data) => {
+            const planningSession: PlanningSession = JSON.parse(data.response);
             alert("Session erstellt: " + planningSession.id);
         });
     }
 
     getSessions() {
-        var http = new HttpClient();
-        http.get('http://localhost:1176/api/values').then(data => {
+        const http = new HttpClient();
+        http.get("http://localhost:1176/api/values").then((data) => {
             this.planningSessions = JSON.parse(data.response);
         });
     }
