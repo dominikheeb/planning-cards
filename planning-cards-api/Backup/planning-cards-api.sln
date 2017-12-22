@@ -1,19 +1,22 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26430.13
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{B23FDB6C-69B2-4342-A6A1-148123D6C3C5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{4CF8295E-C94C-4DBC-A50A-76EE7293498E}"
+	ProjectSection(SolutionItems) = preProject
+		global.json = global.json
+	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "planning-cards-api", "src\planning-cards-api\planning-cards-api.csproj", "{1C27E3B2-E5D4-460C-8A9D-0846A0E8A8BA}"
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "planning-cards-api", "src\planning-cards-api\planning-cards-api.xproj", "{1C27E3B2-E5D4-460C-8A9D-0846A0E8A8BA}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "dataaccess", "src\dataaccess\dataaccess.csproj", "{3C71A3BA-C270-4BEE-A629-E55051F9F4EA}"
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "dataaccess", "src\dataaccess\dataaccess.xproj", "{3C71A3BA-C270-4BEE-A629-E55051F9F4EA}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "dataaccess.interfaces", "src\dataaccess.interfaces\dataaccess.interfaces.csproj", "{D617C2F6-BBB9-4FE2-AFBC-4003E60ACDC5}"
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "dataaccess.interfaces", "src\dataaccess.interfaces\dataaccess.interfaces.xproj", "{D617C2F6-BBB9-4FE2-AFBC-4003E60ACDC5}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "planning-cards-api.models", "src\planning-cards-api.models\planning-cards-api.models.csproj", "{514F43DD-6FDA-49A4-A262-102AF4BEC049}"
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "planning-cards-api.models", "src\planning-cards-api.models\planning-cards-api.models.xproj", "{514F43DD-6FDA-49A4-A262-102AF4BEC049}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -79,6 +79,7 @@
     "aurelia-templating-router": "^1.0.0",
     "bluebird": "^3.4.6",
     "font-awesome": "^4.7.0",
+    "guid": "0.0.12",
     "isomorphic-fetch": "^2.2.1",
     "jquery": "^3.1.1",
     "signalr": "^2.2.1"
